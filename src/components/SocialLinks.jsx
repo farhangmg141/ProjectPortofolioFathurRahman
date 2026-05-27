@@ -51,7 +51,7 @@ const socialLinks = [
     name: "TikTok",
     displayName: "Tiktok",
     subText: "@fathurrahman",
-    icon: ({ className, ...props }) => (
+    icon: () => (
       <svg
         width="24px"
         height="24px"

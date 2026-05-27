@@ -1,5 +1,5 @@
-import React, { useEffect, memo, useMemo, useState } from "react"
-import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, GraduationCap, Briefcase, Zap } from "lucide-react"
+import { useEffect, memo, useMemo, useState } from "react"
+import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, GraduationCap } from "lucide-react"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -22,7 +22,7 @@ const Header = memo(() => (
       data-aos-duration="800"
     >
       <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
-      Crafting tomorrow's digital experiences today
+      Crafting tomorrow&apos;s digital experiences today
       <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
     </p>
   </div>
@@ -119,6 +119,7 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
     </div>
   </div>
 ));
+StatCard.displayName = 'StatCard';
 
 const EducationCard = memo(() => (
   <div 
@@ -144,6 +145,7 @@ const EducationCard = memo(() => (
     </div>
   </div>
 ));
+EducationCard.displayName = 'EducationCard';
 
 const AboutPage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -239,7 +241,7 @@ const AboutPage = () => {
                 data-aos-duration="1000"
               >
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] via-[#8b5cf6] to-[#a855f7]">
-                  Hello, I'm
+                  Hello, I&apos;m
                 </span>
                 <span 
                   className="block mt-3 text-white"
@@ -334,6 +336,7 @@ const AboutPage = () => {
         </a>
       </div>
 
+      {/* eslint-disable-next-line react/no-unknown-property */}
       <style jsx>{`
         @keyframes float {
           0%, 100% { transform: translateY(0); }
